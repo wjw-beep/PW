@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "proofwatch-engine"
+version = "0.1.0"
+description = "Persistent proof-carrying commitment maintenance for evolving Web evidence"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["PyYAML>=6.0,<7"]
+
+[project.scripts]
+proofwatch = "proofwatch.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+proofwatch = ["defaults.yaml"]
